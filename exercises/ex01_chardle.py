@@ -22,20 +22,17 @@ if letter == solution[1]:
     print(letter + " found at index 1")
     instance += 1
 if letter == solution[2]:
-    print (letter + " found at index 2")
+    print(letter + " found at index 2")
+    instance += 1
 if letter == solution[3]:
-    print(letter + "found at index 3")
+    print(letter + " found at index 3")
+    instance += 1
 if letter == solution[4]:
-    print(letter + "found at index 4")
+    print(letter + " found at index 4")
+    instance += 1
 if instance == 1:
-    print(str(instance) + " instances of " + letter + " found in " + solution)
+    print(str(instance) + " instance of " + letter + " found in " + solution)
 if instance > 1:
     print(str(instance) + " instances of " + letter + " found in " + solution)
 if instance == 0:
     print("No instances of " + letter + " found in " + solution)
-
-
-
-
-
-
