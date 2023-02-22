@@ -1,6 +1,6 @@
 """EX02 - One-Shot Wordle - Loops!"""
 
-_author_ = "730525708"
+__author__ = "730525708"
 secret: str = "python"
 number: int = len(secret)
 guess: str = str(input(f"What is your {number}-letter guess? "))
@@ -25,7 +25,7 @@ while index < len(secret):
             if secret[alt_indices] == guess[index]:
                 found = True
             else:
-                alt_indices +=1
+                alt_indices += 1
         if found is True:
             result += YELLOW_BOX
         else:
@@ -39,5 +39,5 @@ while playing:
         playing = False
     else:
         if len(guess) == number and guess != secret:
-                print("Not quite. Play again soon!")
-                playing = False
+            print("Not quite. Play again soon!")
+            playing = False
