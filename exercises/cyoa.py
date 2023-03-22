@@ -58,6 +58,7 @@ def adventure(points: int) -> int:
 
 
 def main():
+    """Choosing to continue, take a break, or stop."""
     points: int = 0
     player: str
     EMOJI = "\U0001F600"
