@@ -1,6 +1,7 @@
 """'list' Utility Functions."""
 __author__ = "730525708"
 
+
 def only_evens(ints: list[int]) -> list[int]:
     """Return a new list containing only the even elements of lst."""
     idx: int = 0
@@ -15,7 +16,6 @@ def only_evens(ints: list[int]) -> list[int]:
 
 def concat(first: list[int], second: list[int]) -> list[int]:
     """Return a new list containing elements of the first list followed by all of the elements of the second list."""
-    idx: int = 0
     all = []
     for i in first:
         all.append(i)
