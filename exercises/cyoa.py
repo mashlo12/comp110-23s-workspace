@@ -2,6 +2,9 @@
 
 __author__ = "730525708"
 
+import random
+
+
 __name__ == "__main__"
 
 player: str
@@ -10,13 +13,16 @@ points: int
 
 def greet() -> None: 
     """Greeting player."""
+    global player
     print("Welcome to the game!")
     player = input("What's your name?")
     print(f"Nice to meet you, {player}!")
+    return None
 
 
 def play_game() -> None:
    """Interacting with player and changing points."""
+   global points
    print(f"Let's start the game, {player}")
    answer = input("Do you want to go left or right?")
    if answer == "left":
@@ -27,10 +33,12 @@ def play_game() -> None:
         print(f"Oh no, {player}! You lost 2 points.")
    else:
      print("Invalid input. Please try again.")
+     return None
 
 
 def adventure(points: int) -> int:
     """Making 3 choices and gain/lose points."""
+    global player
     print(f"{player}, you find yourself at a crossroads. Which way do you want to go?")
     print("1. Go left")
     print("2. Go right")
@@ -57,14 +65,14 @@ def adventure(points: int) -> int:
     return points
 
 
-def main():
+def main() -> None:
     """Choosing to continue, take a break, or stop."""
+    global player
     points: int = 0
-    player: str
     EMOJI = "\U0001F600"
     greet()
     while True:
-        print(f"\n{player}, you have {points} adventure points. What do you want to do next?")
+        print(f"{player}, you have {points} adventure points. What do you want to do next?")
         print("1. Continue down the path")
         print("2. Take a break and rest")
         print("3. End the adventure")
@@ -80,6 +88,7 @@ def main():
             break
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
+    return None
 
 
 EMOJI = "\U0001F600"
