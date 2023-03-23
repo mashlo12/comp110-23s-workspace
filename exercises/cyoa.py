@@ -21,19 +21,19 @@ def greet() -> None:
 
 
 def play_game() -> None:
-   """Interacting with player and changing points."""
-   global points
-   print(f"Let's start the game, {player}")
-   answer = input("Do you want to go left or right?")
-   if answer == "left":
-    points += 5
-    print(f"Great choice, {player}! You gained 5 points.")
-    if answer == "right":
-        points -= 2
+    """Interacting with player and changing points."""
+    global points
+    print(f"Let's start the game, {player}")
+    answer = input("Do you want to go left or right?")
+    if answer == "left":
+        points += 5
+        print(f"Great choice, {player}! You gained 5 points.")
+        if answer == "right":
+            points -= 2
         print(f"Oh no, {player}! You lost 2 points.")
-   else:
-     print("Invalid input. Please try again.")
-     return None
+    else:
+        print("Invalid input. Please try again.")
+    return None
 
 
 def adventure(points: int) -> int:
@@ -55,10 +55,10 @@ def adventure(points: int) -> int:
         dice_roll = random.randint(1, 6)
         print(f"{player}, you rolled a {dice_roll}!")
         if dice_roll <= 3:
-            print(f"You landed on a lucky square and gained 8 points!")
+            print(f"{player}, You landed on a lucky square and gained 8 points!")
             points += 8
         else:
-            print(f"You fell into a pit and lost 3 points!")
+            print(f"{player}, You fell into a pit and lost 3 points!")
             points -= 3
     else:
         print("Invalid choice. Please enter 1, 2, or 3.")
