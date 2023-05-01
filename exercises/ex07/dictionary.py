@@ -2,6 +2,7 @@
 
 __author__ = "730525708"
 
+
 def invert(dict: dict[str, str]) -> dict[str, str]:
     """Inverts keys and values of a dictionary."""
     dict_invert = {}
